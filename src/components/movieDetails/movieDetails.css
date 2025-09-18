@@ -1,0 +1,222 @@
+.movie-details-container {
+    padding: 0;
+}
+
+/* Hero Section */
+.movie-hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 0;
+    color: white;
+    position: relative;
+}
+
+.hero-content {
+    align-items: center;
+    min-height: 500px;
+}
+
+.movie-poster {
+    text-align: center;
+}
+
+.poster-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.poster-img:hover {
+    transform: scale(1.05);
+}
+
+.movie-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.movie-tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+.movie-meta {
+    margin-bottom: 2rem;
+}
+
+.movie-meta .rating-badge {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+}
+
+.movie-meta .runtime,
+.movie-meta .release-date {
+    margin-right: 1.5rem;
+    font-weight: 500;
+}
+
+.genres {
+    margin-bottom: 2rem;
+}
+
+.genre-badge {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #fff;
+    background: transparent !important;
+}
+
+.action-buttons {
+    margin-top: 2rem;
+}
+
+/* Movie Content */
+.movie-content {
+    padding: 3rem 0;
+}
+
+.details-card,
+.sidebar-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.details-card .card-body {
+    padding: 2rem;
+}
+
+.overview-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.details-grid {
+    margin: 2rem 0;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.production-section {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 2px solid #f0f0f0;
+}
+
+.companies {
+    margin-top: 1rem;
+}
+
+.company-badge {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+/* Sidebar */
+.sidebar-card .card-body {
+    padding: 1.5rem;
+}
+
+.fact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.fact-item:last-child {
+    border-bottom: none;
+}
+
+.additional-info {
+    text-align: center;
+}
+
+/* Loading and Error States */
+.movie-details-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.movie-error {
+    margin: 2rem;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-content {
+        text-align: center;
+    }
+    
+    .movie-title {
+        font-size: 2.5rem;
+    }
+    
+    .poster-col {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .movie-title {
+        font-size: 2rem;
+    }
+    
+    .action-buttons .btn {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+    
+    .detail-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .detail-item span {
+        margin-top: 0.3rem;
+        color: #666;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.details-card,
+.sidebar-card {
+    animation: fadeIn 0.6s ease-out;
+}
