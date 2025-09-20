@@ -1,8 +1,8 @@
-import axios from "axios"
+import { axiosInstance } from "../../AxiosInstance/axiosInstance.js"
 
 export default function getMovise(activePage) {
     return function (dispatch) {
-        return axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=b565283dc7e83e50ea181e7329c96854&page=${activePage}`)
+        return axiosInstance.get()
             .then((res) => 
                 dispatch({
                    type : "GET_MOVIES",
